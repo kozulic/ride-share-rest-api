@@ -3,7 +3,16 @@
   "version": "1.0.0",
   "description": "Ride Share REST API made with express.js framework",
   "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "debug": "nodemon --inspect app.js",
+    "start": "node app.js"
+  },
   "author": "Ivan Kozulić",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kozulic/ride-share-rest-api.git"
+  },
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
