@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const userRoutes = require('../components/user/user-route');
 const rideRoutes = require('../components/ride/ride-route');
 const feedbackRoutes = require('../components/feedback/feedback-route');
+const requestRoutes = require('../components/request/request-route');
 
 const verifyToken = require('../middleware/verify-token');
 
@@ -17,7 +18,8 @@ module.exports = (app) => {
 
   app.use('/api/user', userRoutes);
   app.use('/api/ride', verifyToken, rideRoutes);
-  app.use('/api/ride', verifyToken, feedbackRoutes);
+  app.use('/api/feedback', verifyToken, feedbackRoutes);
+  app.use('/api/request', verifyToken, requestRoutes);
 
   return app;
 }
